@@ -1,11 +1,15 @@
+import os
 from flask import Flask, request, jsonify, send_from_directory
 from together import Together
 import textwrap
 
 app = Flask(__name__)
 
+# Fetch API key from environment variables
+API_KEY = os.getenv("TOGETHER_API_KEY")
+
 # Initialize the Together client
-client = Together(api_key="e7a501a28a46881b3559d8599dd96cf6bb100fe303fc4cfa67f02c023b193d41")
+client = Together(e7a501a28a46881b3559d8599dd96cf6bb100fe303fc4cfa67f02c023b193d41)
 
 PROMPT_TEMPLATES = {
     '1': "Provide structured information about the importance of blood donation in 100 words.",
