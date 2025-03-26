@@ -9,7 +9,7 @@ app = Flask(__name__)
 API_KEY = os.getenv("TOGETHER_API_KEY")
 
 # Initialize the Together client
-client = Together(e7a501a28a46881b3559d8599dd96cf6bb100fe303fc4cfa67f02c023b193d41)
+client = Together(api_key=API_KEY)
 
 PROMPT_TEMPLATES = {
     '1': "Provide structured information about the importance of blood donation in 100 words.",
